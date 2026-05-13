@@ -12,13 +12,13 @@ public SugeridorReceta()
 {
 
 }
-public SugeridorReceta(string Nombre,DateTime FechaNacimiento,string TipoDeComida,string Presupuesto,int comesales)
+public SugeridorReceta(string Nombre,DateTime fechaNacimiento, string tipoComida, string presupuesto, int cantidadComensales)
 {
-    this.Nombre=Nombre;
-    this.FechaNacimiento=FechaNacimiento;
-    this.TipoDeComida=TipoDeComida;
-    this.Presupuesto=Presupuesto;
-    this.comesales=comesales;
+    this.nombre = nombre;
+    this.fechaNacimiento = fechaNacimiento;
+    this.tipoComida = tipoComida;
+    this.presupuesto = presupuesto;
+    this.cantidadComensales = cantidadComensales;
 }
 public int CalcularEdad()
 {
