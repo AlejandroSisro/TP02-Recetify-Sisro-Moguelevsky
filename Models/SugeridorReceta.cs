@@ -62,32 +62,48 @@ public string DeterminarPlato()
     }
     return platoSugerido;
 }
-    public void calcularTiempo()
+public int calcularTiempo()
+{
+    int tiempo;
+    if( cantidadComensales < 2 && TipoDeComida == "Caliente" || cantidadComensales > 1 && cantidadComensales <4 && TipoDeComida == "Caliente")
     {
-        int tiempo;
-        if( cantidadComensales < 2 && TipoDeComida == "Caliente" || cantidadComensales > 1 && cantidadComensales <4 && TipoDeComida == "Caliente")
-        {
-            tiempo = 20;
-        }
-        else if( cantidadComensales < 8 && TipoDeComida == "Caliente")
-        {
-            tiempo = 40;
-        }
-        else if( cantidadComensales >= 8 && TipoDeComida == "Caliente")
-        {
-            tiempo = 80;
-        }
-        else if( cantidadComensales > 0 && cantidadComensales < 4 && TipoDeComida == "Fría")
-        {
-            tiempo = 10;
-        }
-        else if( cantidadComensales < 8 && TipoDeComida == "Fría")
-        {
-            tiempo = 20;
-        }
-        else if( cantidadComensales >= 8 && TipoDeComida == "Fría")
-        {
-            tiempo = 40;
-        }
-        return tiempo;
+        tiempo = 20;
     }
+    else if( cantidadComensales < 8 && TipoDeComida == "Caliente")
+    {
+        tiempo = 40;
+    }
+    else if( cantidadComensales >= 8 && TipoDeComida == "Caliente")
+    {
+        tiempo = 80;
+    }
+    else if( cantidadComensales > 0 && cantidadComensales < 4 && TipoDeComida == "Fría")
+    {
+        tiempo = 10;
+    }
+    else if( cantidadComensales < 8 && TipoDeComida == "Fría")
+    {
+        tiempo = 20;
+    }
+    else if( cantidadComensales >= 8 && TipoDeComida == "Fría")
+    {
+        tiempo = 40;
+    }
+    return tiempo;
+}
+public string DeterminarDificultad()
+{
+    string dificultad = "";
+    if(cantidadComensales <= 3 && presupuesto < 3000)
+    {
+        dificultad = "Principiante";
+    }
+    else if(cantidadComensales < 7 && presupuesto < 3000 || cantidadComensales <= 3 && presupuesto < 7000 || cantidadComensales <= 7 && presupuesto > 7000)
+    {
+        dificultad = "Intermedio";
+    }
+    else
+    {
+        dificultad = "Avanzado";
+    }
+}
