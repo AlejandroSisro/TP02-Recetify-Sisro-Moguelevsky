@@ -7,7 +7,7 @@ public class SugeridorReceta
     public string tipoComida { get; set; }
     public string presupuesto { get; set; }
     public int cantidadComensales { get; set; }
-}
+
 public SugeridorReceta()
 {
 
@@ -106,4 +106,6 @@ public string DeterminarDificultad()
     {
         dificultad = "Avanzado";
     }
+    return dificultad;
+}
 }
