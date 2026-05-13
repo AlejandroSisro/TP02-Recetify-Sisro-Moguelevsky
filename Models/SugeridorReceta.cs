@@ -22,7 +22,15 @@ public SugeridorReceta(string Nombre,DateTime fechaNacimiento, string tipoComida
 }
 public int CalcularEdad()
 {
- int edad = fechaNacimiento - DateTime.Today;
+ int edad = DateTime.Today.Year - fechaNacimiento.Year;
+ if(DateTime.Today.Month < fechaNacimiento.Month)
+ {
+    edad-=1;
+ }
+ else if(DateTime.Today.Month == fechaNacimiento.Month && DateTime.Today.Day < fechaNacimiento.Day)
+ {
+    edad-=1;
+ }
  return edad;
 }
 public string DeterminarPlato()
