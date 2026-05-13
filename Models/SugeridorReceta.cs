@@ -25,3 +25,32 @@ public int CalcularEdad()
  int edad = fechaNacimiento - DateTime.Today;
  return edad;
 }
+public string DeterminarPlato()
+{
+    string platoSugerido;
+    if(tipoComida = "Caliente" && presupuesto < 3000)
+    {
+        platoSugerido = "Fideos con manteca";
+    }
+    else if(tipoComida = "Caliente" && presupuesto < 7000)
+    {
+        platoSugerido = "Arroz con verduras salteadas";
+    }
+    else if(tipoComida = "Caliente" && presupuesto > 7000)
+    {
+        platoSugerido = "Pollo al horno con guarnición";
+    }
+    else if(tipoComida = "Fría" && presupuesto < 3000)
+    {
+        platoSugerido = "Ensalada simple";
+    }
+    else if(tipoComida = "Fría" && presupuesto < 7000)
+    {
+        platoSugerido = "Ensalada completa con proteína";
+    }
+    else if(tipoComida = "Fría" && presupuesto > 7000)
+    {
+        platoSugerido = "Tabla de fiambres y quesos";
+    }
+    return platoSugerido;
+}
