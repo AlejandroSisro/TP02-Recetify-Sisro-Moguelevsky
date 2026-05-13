@@ -54,3 +54,32 @@ public string DeterminarPlato()
     }
     return platoSugerido;
 }
+    public void calcularTiempo()
+    {
+        int tiempo;
+        if( cantidadComensales < 2 && TipoDeComida == "Caliente" || cantidadComensales > 1 && cantidadComensales <4 && TipoDeComida == "Caliente")
+        {
+            tiempo = 20;
+        }
+        else if( cantidadComensales < 8 && TipoDeComida == "Caliente")
+        {
+            tiempo = 40;
+        }
+        else if( cantidadComensales >= 8 && TipoDeComida == "Caliente")
+        {
+            tiempo = 80;
+        }
+        else if( cantidadComensales > 0 && cantidadComensales < 4 && TipoDeComida == "Fría")
+        {
+            tiempo = 10;
+        }
+        else if( cantidadComensales < 8 && TipoDeComida == "Fría")
+        {
+            tiempo = 20;
+        }
+        else if( cantidadComensales >= 8 && TipoDeComida == "Fría")
+        {
+            tiempo = 40;
+        }
+        return tiempo;
+    }
