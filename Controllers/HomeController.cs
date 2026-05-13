@@ -18,9 +18,14 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult SugeridorReceta(SugeridorReceta SugeridorReceta)
     {
-        return View();
+        ViewBag.Nombre=SugeridorReceta.Nombre;
+        ViewBag.FechaNacimiento=SugeridorReceta.FechaNacimiento;
+        ViewBag.TipoDeComida=SugeridorReceta.TipoDeComida;
+        ViewBag.Presupuesto=SugeridorReceta.Presupuesto;
+        ViewBag.cantidadComensales=SugeridorReceta.cantidadComensales;
+        return View("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
