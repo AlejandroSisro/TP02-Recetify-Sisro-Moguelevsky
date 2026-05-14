@@ -5,14 +5,14 @@ public class SugeridorReceta
     public string nombre { get; set; }
     public DateTime fechaNacimiento { get; set; }
     public string tipoComida { get; set; }
-    public string presupuesto { get; set; }
+    public int presupuesto { get; set; }
     public int cantidadComensales { get; set; }
 
 public SugeridorReceta()
 {
 
 }
-public SugeridorReceta(string Nombre,DateTime fechaNacimiento, string tipoComida, string presupuesto, int cantidadComensales)
+public SugeridorReceta(string Nombre,DateTime fechaNacimiento, string tipoComida, int presupuesto, int cantidadComensales)
 {
     this.nombre = nombre;
     this.fechaNacimiento = fechaNacimiento;
@@ -35,28 +35,28 @@ public int CalcularEdad()
 }
 public string DeterminarPlato()
 {
-    string platoSugerido;
-    if(tipoComida = "Caliente" && presupuesto < 3000)
+    string platoSugerido="";
+    if(tipoComida == "Caliente" && presupuesto < 3000)
     {
         platoSugerido = "Fideos con manteca";
     }
-    else if(tipoComida = "Caliente" && presupuesto < 7000)
+    else if(tipoComida == "Caliente" && presupuesto < 7000)
     {
         platoSugerido = "Arroz con verduras salteadas";
     }
-    else if(tipoComida = "Caliente" && presupuesto > 7000)
+    else if(tipoComida == "Caliente" && presupuesto > 7000)
     {
         platoSugerido = "Pollo al horno con guarnición";
     }
-    else if(tipoComida = "Fría" && presupuesto < 3000)
+    else if(tipoComida == "Frío" && presupuesto < 3000)
     {
         platoSugerido = "Ensalada simple";
     }
-    else if(tipoComida = "Fría" && presupuesto < 7000)
+    else if(tipoComida == "Frío" && presupuesto < 7000)
     {
         platoSugerido = "Ensalada completa con proteína";
     }
-    else if(tipoComida = "Fría" && presupuesto > 7000)
+    else if(tipoComida == "Frío" && presupuesto > 7000)
     {
         platoSugerido = "Tabla de fiambres y quesos";
     }
@@ -64,30 +64,31 @@ public string DeterminarPlato()
 }
 public int calcularTiempo()
 {
-    int tiempo;
-    if( cantidadComensales < 2 && TipoDeComida == "Caliente" || cantidadComensales > 1 && cantidadComensales <4 && TipoDeComida == "Caliente")
+    int tiempo=0;
+    if( cantidadComensales < 2 && tipoComida == "Caliente" || cantidadComensales > 1 && cantidadComensales <4 && tipoComida == "Caliente")
     {
         tiempo = 20;
     }
-    else if( cantidadComensales < 8 && TipoDeComida == "Caliente")
+    else if(cantidadComensales > 3 && cantidadComensales < 8 && tipoComida == "Caliente")
     {
         tiempo = 40;
     }
-    else if( cantidadComensales >= 8 && TipoDeComida == "Caliente")
+    else if(cantidadComensales >= 8 && tipoComida == "Caliente")
     {
         tiempo = 80;
     }
-    else if( cantidadComensales > 0 && cantidadComensales < 4 && TipoDeComida == "Fría")
+    else if(cantidadComensales > 0 && cantidadComensales < 4 && tipoComida == "Frío")
     {
         tiempo = 10;
     }
-    else if( cantidadComensales < 8 && TipoDeComida == "Fría")
+    else if(cantidadComensales > 3 && cantidadComensales < 8 && tipoComida == "Frío")
     {
         tiempo = 20;
     }
-    else if( cantidadComensales >= 8 && TipoDeComida == "Fría")
+    else if(cantidadComensales >= 8 && tipoComida == "Frío")
     {
         tiempo = 40;
+           return tiempo;
     }
     return tiempo;
 }
@@ -102,7 +103,7 @@ public string DeterminarDificultad()
     {
         dificultad = "Intermedio";
     }
-    else
+    else if(cantidadComensales >= 8)
     {
         dificultad = "Avanzado";
     }
