@@ -3,6 +3,22 @@
 }
 <body>
 <div>
-    <form action=""></form>
+    <form action='@Url.Action("SugeridorReceta", "Home")' method="GET" enctype="application/x-www-form-urlencoded">
+        Nombre: <input type="text" name="nombre" />
+        <br>
+        Fecha de nacimiento: <input type="date" name="fechaNacimiento" />
+        <br>
+        Tipo de comida: <select name="tipoComida">
+            <option>Caliente</option>
+            <option selected>Frío</option>
+        </select>
+        <br>
+        Presupuesto: <input type="range" max="10000" min="1000"step="1000" name="presupuesto"/>
+        <br>
+        Cantidad de comensales: <input type="range" max="10" min="1"step="1" name="cantidadComensales"/>
+        <br>
+        <input type="submit" value="Submit form">
+        <input type="reset" value="Reset form">
+    </form>
 </div>
 </body>
