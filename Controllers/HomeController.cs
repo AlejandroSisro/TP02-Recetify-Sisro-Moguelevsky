@@ -25,6 +25,10 @@ public class HomeController : Controller
         ViewBag.tipoDeComida=SugeridorReceta.tipoDeComida;
         ViewBag.presupuesto=SugeridorReceta.presupuesto;
         ViewBag.cantidadComensales=SugeridorReceta.cantidadComensales;
+        ViewBag.edad=SugeridorReceta.CalcularEdad();
+        ViewBag.platoSugerido=SugeridorReceta.DeterminarPlato();
+        ViewBag.tiempo=SugeridorReceta.calcularTiempo();
+        ViewBag.dificultad=SugeridorReceta.DeterminarDificultad();
         return View("Resultado");
     }
 
