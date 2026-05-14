@@ -20,12 +20,12 @@ public class HomeController : Controller
 
     public IActionResult SugeridorReceta(SugeridorReceta SugeridorReceta)
     {
-        ViewBag.Nombre=SugeridorReceta.Nombre;
-        ViewBag.FechaNacimiento=SugeridorReceta.FechaNacimiento;
-        ViewBag.TipoDeComida=SugeridorReceta.TipoDeComida;
-        ViewBag.Presupuesto=SugeridorReceta.Presupuesto;
+        ViewBag.nombre=SugeridorReceta.nombre;
+        ViewBag.fechaNacimiento=SugeridorReceta.fechaNacimiento;
+        ViewBag.tipoDeComida=SugeridorReceta.tipoDeComida;
+        ViewBag.presupuesto=SugeridorReceta.presupuesto;
         ViewBag.cantidadComensales=SugeridorReceta.cantidadComensales;
-        return View("Index");
+        return View("Resultado");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
