@@ -22,7 +22,7 @@ public class HomeController : Controller
     {
         ViewBag.nombre=SugeridorReceta.nombre;
         ViewBag.fechaNacimiento=SugeridorReceta.fechaNacimiento;
-        ViewBag.tipoDeComida=SugeridorReceta.tipoDeComida;
+        ViewBag.tipoComida=SugeridorReceta.tipoComida;
         ViewBag.presupuesto=SugeridorReceta.presupuesto;
         ViewBag.cantidadComensales=SugeridorReceta.cantidadComensales;
         ViewBag.edad=SugeridorReceta.CalcularEdad();
