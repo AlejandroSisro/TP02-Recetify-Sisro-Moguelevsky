@@ -2,16 +2,15 @@
     ViewData["Title"] = "Recetify";
 }
 <body>
-<div>
+<div class = "Principal">
     <form action='@Url.Action("SugeridorReceta", "Home")' method="GET" enctype="application/x-www-form-urlencoded">
         Nombre: <input type="text" name="nombre" />
         <br>
         Fecha de nacimiento: <input type="date" name="fechaNacimiento" />
         <br>
-        Tipo de comida: <select name="tipoComida">
-            <option>Caliente</option>
-            <option selected>Frío</option>
-        </select>
+        Tipo de comida:
+        <input type="radio" name="tipoComida" value="Caliente"> Caliente
+        <input type="radio" name="tipoComida" value="Frío"> Frío
         <br>
         Presupuesto: <input type="range" max="10000" min="1000"step="1000" name="presupuesto"/>
         <br>
