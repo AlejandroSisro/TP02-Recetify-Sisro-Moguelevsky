@@ -2,22 +2,32 @@
     ViewData["Title"] = "Recetify";
 }
 <body>
-<div class = "Principal">
-    <form action='@Url.Action("SugeridorReceta", "Home")' method="GET" enctype="application/x-www-form-urlencoded">
-        Nombre: <input type="text" name="nombre" />
-        <br>
-        Fecha de nacimiento: <input type="date" name="fechaNacimiento" />
-        <br>
-        Tipo de comida:
-        <input type="radio" name="tipoComida" value="Caliente"> Caliente
-        <input type="radio" name="tipoComida" value="Frío"> Frío
-        <br>
-        Presupuesto: <input type="range" max="10000" min="1000"step="1000" name="presupuesto"/>
-        <br>
-        Cantidad de comensales: <input type="range" max="10" min="1"step="1" name="cantidadComensales"/>
-        <br>
-        <input type="submit" value="Submit form">
-        <input type="reset" value="Reset form">
-    </form>
-</div>
+    <section>
+        <div class = "Principal">
+            <form action='@Url.Action("SugeridorReceta", "Home")' method="GET" enctype="application/x-www-form-urlencoded">
+                Nombre: <input type="text" name="nombre" />
+                <br>
+                <br>
+                Fecha de nacimiento: <input type="date" name="fechaNacimiento" />
+                <br>
+                <br>
+                Tipo de comida:
+                <input type="radio" name="tipoComida" value="Caliente"> Caliente
+                <input type="radio" name="tipoComida" value="Frío"> Frío
+                <br>
+                <br>
+                Presupuesto: <input type="range" max="10000" min="1000"step="1000" name="presupuesto"/>
+                <br>
+                <br>
+                Cantidad de comensales: <input type="range" max="10" min="1"step="1" name="cantidadComensales"/>
+                <br>
+                <br>
+                <input type="submit" value="Submit form">
+                <input type="reset" value="Reset form">
+            </form>
+        </div>
+        <img src="Imagenes/FideosManteca.jpg" alt="Uno de los platos que ofrecemos">
+        <img src="Imagenes/ArrozVerduras.png" alt="Uno de los platos que ofrecemos">
+        <img src="Imagenes/PolloGuarnicion.png" alt="Uno de los platos que ofrecemos">
+    </section>
 </body>
