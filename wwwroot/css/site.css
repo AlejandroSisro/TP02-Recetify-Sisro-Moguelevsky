@@ -8,7 +8,7 @@ background-color: #d94426;
     padding: 1.5%;
     margin: 1.5%;
     border-radius: 50px;
-    border: 10px solid #f18547;
+    border: 15px solid #f18547;
     margin-bottom: 5%;
 }
 section
@@ -17,7 +17,7 @@ section
     padding: 1.5%;
     margin: 1.5%;
     border-radius: 50px;
-    border: 10px solid #f18547;
+    border: 15px solid #f18547;
     margin-bottom: 50%;
 }
 header
@@ -30,11 +30,11 @@ img
   margin:0.5%;
   padding:0.5%;
   border-radius: 50px;
-  border: 10px solid #ff5e00;
+  border: 15px solid #ffa136;
 }
 h2
 {
-    color:#ff5e00;
+    color:#ffa136;
     text-align: center;
 }
 .Cold
@@ -43,5 +43,5 @@ h2
 }
 .Colder
 {
-    border: 10px solid #00c3ff;
+    border: 15px solid #00c3ff;
 }
