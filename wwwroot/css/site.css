@@ -1,21 +1,33 @@
 body
 {
-background-color: #c41026;
+background-color: #d94426;
 }
 .Principal
 {
     background-color: #ffffff;
     padding: 1.5%;
     margin: 1.5%;
-    border-radius: 25px;
-    border: 10px solid #ff7b00;
+    border-radius: 50px;
+    border: 10px solid #f18547;
+    margin-bottom: 5%;
+}
+section
+{
+    background-color: #e46522;
+    padding: 1.5%;
+    margin: 1.5%;
+    border-radius: 50px;
+    border: 10px solid #f18547;
     margin-bottom: 50%;
 }
 header
 {
-    background-color: #ff9839;
+    background-color: #f18547;
 }
-footer img
+img
 {
-  width:100%
+  width:30%;
+  margin:0.5%;
+  padding:0.5%;
+  border-radius: 50px;
 }
